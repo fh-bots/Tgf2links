@@ -41,7 +41,7 @@ async def handle_message(evt: events.NewMessage.Event) -> None:
         await evt.reply(group_chat_message)
         return
     if not evt.file:
-        await evt.reply(start_message)
+        await evt.reply("Just send me the file to get the Ext. download link!")
         return
     url = public_url / str(pack_id(evt)) / get_file_name(evt)
     await evt.reply(f"Link to download the file👇:\n {url}\n\n A Bot by : @FH_Bots ~ @filimhouseadmin ")
