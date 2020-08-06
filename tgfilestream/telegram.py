@@ -37,9 +37,9 @@ client = TelegramClient(StringSession(session_name), api_id, api_hash)
 transfer = ParallelTransferrer(client)
 
 
-@TGraph.on_message(Filters.command("test"))
-async def start(client, message):
-    await message.reply_text(f"Hello {message.from_user.first_name},\nI'm telegram to telegra.ph image uploader bot by @filimhouseadmin \n Press /help for assistance", True)
+#@TGraph.on_message(Filters.command("test"))
+#async def start(client, message):
+ #   await message.reply_text(f"Hello {message.from_user.first_name},\nI'm telegram to telegra.ph image uploader bot by @filimhouseadmin \n Press /help for assistance", True)
 
 @client.on(events.NewMessage)
 async def handle_message(evt: events.NewMessage.Event) -> None:
